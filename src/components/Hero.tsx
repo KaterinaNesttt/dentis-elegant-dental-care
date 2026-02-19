@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Eyebrow */}
           <p className="text-sm tracking-[0.3em] uppercase mb-5 animate-fade-up font-sans font-normal text-accent">
-            Преміальна стоматологія · Кропивницький
+             стоматологія у · м.Кропивницький
           </p>
 
           {/* Headline */}
@@ -67,7 +67,7 @@ export default function Hero() {
           <div className="flex gap-10 mt-14 animate-fade-up delay-400">
             {[
             { num: "15+", label: "Років досвіду" },
-            { num: "5000+", label: "Пацієнтів" },
+            { num: "1000+", label: "Пацієнтів" },
             { num: "98%", label: "Задоволені клієнти" }].
             map((stat) =>
             <div key={stat.label}>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import logo from "@assets/Dentis_with_text.webp"
+import logo from "@assets/Dentis_with_Text.webp"
 
 const navLinks = [
 { label: "Про нас", href: "#about" },
@@ -36,13 +36,15 @@ export default function Header() {
       }>
 
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {logo}
         <a
           href="#"
-          className="flex flex-col leading-none"
+          className="flex items-center leading-none"
           onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}>
-
-         
+          <img
+            src={logo}
+            alt="Dentis Logo"
+            className="h-12 w-auto brightness-125 opacity-90 hover:opacity-100 transition-opacity duration-200"
+          />
         </a>
 
         {/* Desktop nav */}
