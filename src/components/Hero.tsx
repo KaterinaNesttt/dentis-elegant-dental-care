@@ -18,18 +18,17 @@ export default function Hero() {
           loop
           playsInline
           className="w-full h-full object-cover"
-          ref={(el) => { if (el) el.playbackRate = 0.7; }}
+          ref={(el) => { if (el) el.playbackRate = 0.6; }}
         />
-        <div className="absolute inset-0 gradient-hero opacity-80" />
+        <div className="absolute inset-0 gradient-hero opacity-70" />
       </div>
 
-      {/* Gold accent line top */}
-      <div className="absolute top-0 left-0 right-0 h-1 gradient-gold" />
+     
 
       <div className="container mx-auto px-4 relative z-10 pt-28 pb-20">
         <div className="max-w-2xl">
           {/* Eyebrow */}
-          <p className="text-sm tracking-[0.3em] uppercase mb-5 animate-fade-up font-sans font-normal text-accent">
+          <p className="text-sm tracking-[0.3em] uppercase mb-5 animate-fade-up font-sans font-normal text-gold">
              стоматологія у · м.Кропивницький
           </p>
 
@@ -37,7 +36,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-6xl leading-tight mb-6 animate-fade-up delay-100 font-sans font-extralight lg:text-6xl text-secondary">
             Посмішка, що
             <br />
-            <em className="not-italic text-accent">надихає</em>
+            <em className="not-italic text-gold">надихає</em>
           </h1>
 
           {/* Subline */}
@@ -57,7 +56,7 @@ export default function Hero() {
             </a>
             <button
               onClick={() => handleScroll("#services")}
-              className="flex items-center justify-center gap-2 border border-primary-foreground/30 text-primary-foreground/90 hover:border-gold hover:text-gold px-8 py-4 rounded-full font-body font-medium text-base transition-all duration-200">
+              className="flex items-center justify-center gap-2 border border-gold-light/50 text-gold-light/90 hover:bg-gold hover:border-gold hover:text-secondary px-8 py-4 rounded-full font-body font-medium text-base transition-all duration-200">
 
               Наші послуги
             </button>
@@ -71,7 +70,7 @@ export default function Hero() {
             { num: "98%", label: "Задоволені клієнти" }].
             map((stat) =>
             <div key={stat.label}>
-                <div className="font-display text-2xl font-bold text-accent">{stat.num}</div>
+                <div className="font-display text-2xl font-bold text-gold">{stat.num}</div>
                 <div className="font-body text-xs text-primary-foreground/60 tracking-wide mt-0.5">{stat.label}</div>
               </div>
             )}

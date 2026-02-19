@@ -89,23 +89,23 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Manrope', serif;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Manrope', serif;
   }
 
   .font-body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
   }
 
   .text-gold {
@@ -114,6 +114,11 @@
 
   .text-navy {
     color: hsl(var(--navy));
+  }
+
+  /* Custom override used for selected components' dark text */
+  .text-custom-dark {
+    color: #333333;
   }
 
   .bg-navy {

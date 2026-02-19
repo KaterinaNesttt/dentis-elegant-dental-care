@@ -31,7 +31,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled ?
-      "bg-navy shadow-nav py-3" :
+      "bg-navy shadow-nav opacity-95 py-3" :
       "bg-transparent py-5"}`
       }>
 
@@ -43,7 +43,7 @@ export default function Header() {
           <img
             src={logo}
             alt="Dentis Logo"
-            className="h-12 w-auto brightness-125 opacity-90 hover:opacity-100 transition-opacity duration-200"
+            className="h-20 w-auto brightness-100 opacity-90 hover:opacity-100 transition-opacity duration-200"
           />
         </a>
 
@@ -53,7 +53,7 @@ export default function Header() {
           <button
             key={link.href}
             onClick={() => handleNav(link.href)}
-            className="text-primary-foreground/80 hover:text-gold text-sm font-body font-medium tracking-wide transition-colors duration-200">
+            className="text-primary-foreground hover:text-gold text-xl font-body font-sans-serif tracking-wide transition-colors duration-200">
 
               {link.label}
             </button>

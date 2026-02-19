@@ -6,13 +6,13 @@ const doctors = [
     img: doctorVerhovsky,
     name: "Верховський Олександр Олександрович",
     title: "Головний лікар",
-    speciality: "Хірург-імплантолог, ортопед",
+    speciality: "Лікар-стоматолог, імплантолог",
     experience: "15+ років досвіду",
-    desc: "Спеціаліст вищої категорії. Регулярно проходить навчання в провідних клініках Європи. Автор індивідуальних планів реабілітації.",
+    desc: "Спеціаліст вищої категорії. Регулярно проходить навчання в провідних клініках. Автор індивідуальних планів реабілітації.",
   },
   {
     img: doctorFemale,
-    name: "Коваленко Наталія Вікторівна",
+    name: "Лаченко Антон Євгенійович",
     title: "Лікар-стоматолог",
     speciality: "Терапевт, естетична стоматологія",
     experience: "8 років досвіду",
@@ -26,7 +26,7 @@ export default function Doctors() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-gold font-body text-sm tracking-[0.3em] uppercase font-medium mb-3">Команда</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-navy mb-2 gold-line-center">
+                <h2 className="font-display text-4xl md:text-5xl font-bold text-custom-dark mb-2 gold-line-center">
             Наші лікарі
           </h2>
           <p className="font-body text-muted-foreground max-w-xl mx-auto mt-5">
@@ -40,19 +40,19 @@ export default function Doctors() {
               key={doc.name}
               className="bg-card rounded-2xl overflow-hidden border border-border shadow-card-custom hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="relative h-72 overflow-hidden bg-secondary">
+              <div className="relative h-81 overflow-hidden bg-secondary">
                 <img
                   src={doc.img}
                   alt={doc.name}
                   className="w-full h-full object-cover object-top"
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-card to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-card to-transparent" />
               </div>
 
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <div>
-                    <h3 className="font-display font-bold text-navy text-lg leading-snug">{doc.name}</h3>
+                          <h3 className="font-display font-bold text-custom-dark text-lg leading-snug">{doc.name}</h3>
                     <p className="text-gold font-body font-semibold text-sm mt-1">{doc.title}</p>
                   </div>
                   <span className="shrink-0 text-[10px] tracking-wider uppercase font-body font-semibold bg-navy/8 text-navy px-2.5 py-1 rounded-full">
@@ -61,7 +61,7 @@ export default function Doctors() {
                 </div>
 
                 <p className="font-body text-sm text-muted-foreground mb-1">
-                  <span className="text-navy font-medium">Спеціалізація:</span> {doc.speciality}
+                        <span className="text-custom-dark font-medium">Спеціалізація:</span> {doc.speciality}
                 </p>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mt-3">{doc.desc}</p>
 

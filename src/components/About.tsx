@@ -15,12 +15,12 @@ export default function About() {
           {/* Left text */}
           <div>
             <p className="text-gold font-body text-sm tracking-[0.3em] uppercase font-medium mb-4">Про нас</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-navy leading-tight mb-6 gold-line">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-custom-dark leading-tight mb-6 gold-line">
               Довіра пацієнтів —<br />
-              <em className="not-italic text-navy-light">наша найвища нагорода</em>
+              <em className="not-italic text-custom-dark">наша найвища нагорода</em>
             </h2>
             <p className="font-body text-muted-foreground leading-relaxed mb-5">
-              Стоматологічна клініка <strong className="text-navy">«Дентіс»</strong> — це місце, де сучасна медицина поєднується з турботою та теплом. Під керівництвом головного лікаря <strong className="text-navy">Верховського Олександра Олександровича</strong> ми надаємо стоматологічну допомогу найвищого рівня.
+              Стоматологічна клініка <strong className="text-custom-dark">«Дентіс»</strong> — це місце, де сучасна медицина поєднується з турботою та теплом. Ми надаємо стоматологічну допомогу найвищого рівня.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed mb-8">
               Наша клініка оснащена передовим цифровим обладнанням. Ми постійно навчаємося та впроваджуємо найновіші методики лікування, щоб ви отримували найкращий результат.
@@ -44,7 +44,7 @@ export default function About() {
                 <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
                   <Icon size={20} className="text-gold" />
                 </div>
-                <h3 className="font-display font-semibold text-navy text-lg mb-2">{title}</h3>
+                <h3 className="font-display font-semibold text-custom-dark text-lg mb-2">{title}</h3>
                 <p className="font-body text-muted-foreground text-sm leading-relaxed">{desc}</p>
               </div>
             ))}

@@ -6,7 +6,7 @@ const news = [
     badge: "Акція",
     title: "Безкоштовна консультація",
     desc: "Запишіться на первинний огляд та отримайте безкоштовну консультацію головного лікаря та план лікування.",
-    date: "До 31 березня 2025",
+    date: "До 31 березня 2026",
     hot: true,
   },
   {
@@ -14,7 +14,7 @@ const news = [
     badge: "Акція",
     title: "Відбілювання зубів — 20% знижка",
     desc: "Отримайте сяючу посмішку зі знижкою 20% на процедуру відбілювання Zoom4 у березні–квітні.",
-    date: "Березень — Квітень 2025",
+    date: "Березень — Квітень 2026",
     hot: false,
   },
   {
@@ -28,8 +28,8 @@ const news = [
   {
     type: "news",
     badge: "Новини",
-    title: "Дитяча стоматологія — нова програма",
-    desc: "Запустили програму «Перший зуб» — особливий підхід до дітей 3–7 років. Без болю, зі сміхом і без страху.",
+    title: "Нові імплантаційні системи преміум-класу",
+    desc: "У клініці зʼявилися нові імплантаційні системи від провідних світових виробників. Вони забезпечують високу приживлюваність, надійність та природний естетичний результат навіть у складних клінічних випадках.",
     date: "Січень 2025",
     hot: false,
   },
@@ -41,7 +41,7 @@ export default function NewsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-gold font-body text-sm tracking-[0.3em] uppercase font-medium mb-3">Новини та акції</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-navy gold-line-center">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-custom-dark gold-line-center">
             Актуальні пропозиції
           </h2>
         </div>
@@ -65,13 +65,13 @@ export default function NewsSection() {
                   className={`inline-block font-body text-[10px] tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full mb-4 ${
                     item.type === "promo"
                       ? "bg-gold/15 text-gold"
-                      : "bg-navy/8 text-navy"
+                        : "bg-navy/8 text-custom-dark"
                   }`}
                 >
                   {item.badge}
                 </span>
-                <h3 className="font-display font-bold text-navy text-xl mb-3">{item.title}</h3>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{item.desc}</p>
+                  <h3 className="font-display font-bold text-custom-dark text-xl mb-3">{item.title}</h3>
+                  <p className="font-body text-muted-foreground text-sm leading-relaxed mb-4">{item.desc}</p>
                 <div className="flex items-center gap-2 text-muted-foreground text-xs font-body">
                   <CalendarDays size={13} />
                   <span>{item.date}</span>

@@ -69,10 +69,10 @@ export default function Reviews() {
 
               <div className="flex items-center justify-between mt-auto">
                 <div>
-                  <div className="font-display font-semibold text-navy text-sm">{rev.name}</div>
+                  <div className="font-display font-semibold text-custom-dark text-sm">{rev.name}</div>
                   <div className="font-body text-xs text-muted-foreground mt-0.5">{rev.service}</div>
                 </div>
-                <div className="w-9 h-9 rounded-full bg-navy/8 flex items-center justify-center font-display font-bold text-navy text-sm">
+                <div className="w-9 h-9 rounded-full bg-navy/8 flex items-center justify-center font-display font-bold text-custom-dark text-sm">
                   {rev.name[0]}
                 </div>
               </div>

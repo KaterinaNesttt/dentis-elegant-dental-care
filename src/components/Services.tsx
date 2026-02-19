@@ -27,9 +27,9 @@ const services = [
   },
   {
     icon: HeartPulse,
-    title: "Дитяча стоматологія",
-    desc: "Ніжний підхід до маленьких пацієнтів. Профілактика та лікування без страху.",
-    tag: "Для дітей",
+    title: "Професійне очищення",
+    desc: "Професійна гігієна зубів спрямована на видалення зубного каменю, мʼякого та пігментованого нальоту.",
+    tag: null,
   },
   {
     icon: ScanLine,
@@ -64,10 +64,10 @@ export default function Services() {
 
               {/* Icon */}
               <div className="w-12 h-12 rounded-xl bg-navy/5 group-hover:bg-gold/10 transition-colors flex items-center justify-center mb-5">
-                <Icon size={22} className="text-navy group-hover:text-gold transition-colors" />
+                <Icon size={22} className="text-custom-dark group-hover:text-gold transition-colors" />
               </div>
 
-              <h3 className="font-display font-semibold text-navy text-xl mb-3">{title}</h3>
+              <h3 className="font-display font-semibold text-custom-dark text-xl mb-3">{title}</h3>
               <p className="font-body text-muted-foreground text-sm leading-relaxed">{desc}</p>
             </div>
           ))}
@@ -76,7 +76,7 @@ export default function Services() {
         <div className="text-center mt-10">
           <a
             href="tel:+380504800825"
-            className="inline-flex items-center gap-2 border-2 border-navy text-navy hover:bg-navy hover:text-primary-foreground px-8 py-3.5 rounded-full font-body font-semibold text-sm transition-all duration-200"
+            className="inline-flex items-center gap-2 border-2 border-navy text-custom-dark hover:bg-navy hover:text-primary-foreground px-8 py-3.5 rounded-full font-body font-semibold text-sm transition-all duration-200"
           >
             Записатися на консультацію
           </a>

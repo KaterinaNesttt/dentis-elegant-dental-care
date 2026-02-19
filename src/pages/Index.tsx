@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import Doctors from "@/components/Doctors";
 import NewsSection from "@/components/NewsSection";
 import Reviews from "@/components/Reviews";
+import Faq from "@/components/Faq";
 import Contacts from "@/components/Contacts";
 import Footer from "@/components/Footer";
 import { Phone } from "lucide-react";
@@ -20,6 +21,7 @@ const Index = () => {
         <Doctors />
         <NewsSection />
         <Reviews />
+        <Faq />
         <Contacts />
       </main>
       <Footer />

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@assets/Dentis_with_Text.webp"
 
 export default function Footer() {
   const handleNav = (href: string) => {
@@ -7,13 +8,21 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-foreground border-t border-primary-foreground/10">
+    <footer className="bg-navy border-t border-primary-foreground/10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-10 items-start">
           {/* Brand */}
           <div>
-            <div className="font-display text-2xl font-bold text-primary-foreground tracking-wider">ДЕНТІС</div>
-            <div className="text-gold text-[10px] tracking-[0.3em] uppercase font-body font-light mb-4">Стоматологія</div>
+           <a
+          href="#"
+          className="flex items-center leading-none"
+          onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}>
+          <img
+            src={logo}
+            alt="Dentis Logo"
+            className="h-24 w-auto brightness-125 opacity-90 hover:opacity-100 transition-opacity duration-200"
+          />
+        </a>
             <p className="font-body text-primary-foreground/50 text-sm leading-relaxed">
               Преміальна стоматологічна клініка у Кропивницькому. Ваша посмішка — наша гордість.
             </p>
