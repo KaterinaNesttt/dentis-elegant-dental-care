@@ -1,24 +1,38 @@
 import { Phone } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
+import { useEffect, useRef } from "react";
 
 export default function Hero() {
   const handleScroll = (href: string) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
+  
+const videoRef = useRef(null);
+useEffect(() => {
+  const video = videoRef.current;
+  if (video) {
+    video.play().catch(() => {});
+    video.playbackRate = 0.6;
+  }
+}, []);
+
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background video with overlay */}
       <div className="absolute inset-0">
         <video
+          ref={videoRef}
           src={heroVideo}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
+          poster="/fallback.jpg"
           className="w-full h-full object-cover"
-          ref={(el) => { if (el) el.playbackRate = 0.6; }}
+          
         />
         <div className="absolute inset-0 gradient-hero opacity-70" />
       </div>
