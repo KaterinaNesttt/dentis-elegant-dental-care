@@ -109,7 +109,7 @@
   }
 
   .text-gold {
-    color: hsl(var(--gold));
+    color: hsl(var(--gold-light));
   }
 
   .text-navy {
@@ -121,7 +121,7 @@
   }
 
   .bg-gold {
-    background-color: hsl(var(--gold));
+    background-color: hsl(var(--gold-light));
   }
 
   .bg-cream {
@@ -188,7 +188,7 @@
     display: block;
     width: 50px;
     height: 2px;
-    background: hsl(var(--gold));
+    background: hsl(var(--gold-light));
     margin-top: 12px;
   }
 
@@ -197,7 +197,7 @@
     display: block;
     width: 50px;
     height: 2px;
-    background: hsl(var(--gold));
+    background: hsl(var(--gold-light));
     margin: 12px auto 0;
   }
 }
