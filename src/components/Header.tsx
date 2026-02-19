@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Про нас", href: "#about" },
-  { label: "Послуги", href: "#services" },
-  { label: "Лікарі", href: "#doctors" },
-  { label: "Акції", href: "#news" },
-  { label: "Відгуки", href: "#reviews" },
-  { label: "Контакти", href: "#contacts" },
-];
+{ label: "Про нас", href: "#about" },
+{ label: "Послуги", href: "#services" },
+{ label: "Лікарі", href: "#doctors" },
+{ label: "Акції", href: "#news" },
+{ label: "Відгуки", href: "#reviews" },
+{ label: "Контакти", href: "#contacts" }];
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,44 +29,44 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-navy shadow-nav py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
+      scrolled ?
+      "bg-navy shadow-nav py-3" :
+      "bg-transparent py-5"}`
+      }>
+
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <a
           href="#"
           className="flex flex-col leading-none"
-          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        >
-          <span className="font-display text-2xl font-bold text-primary-foreground tracking-wider">
+          onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}>
+
+          <span className="tracking-wider text-secondary font-sans font-medium text-3xl">
             ДЕНТІС
           </span>
-          <span className="text-gold text-[10px] tracking-[0.3em] uppercase font-body font-light">
+          <span className="text-[10px] tracking-[0.3em] uppercase font-light text-accent font-sans">
             Стоматологія
           </span>
         </a>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-7">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNav(link.href)}
-              className="text-primary-foreground/80 hover:text-gold text-sm font-body font-medium tracking-wide transition-colors duration-200"
-            >
+          {navLinks.map((link) =>
+          <button
+            key={link.href}
+            onClick={() => handleNav(link.href)}
+            className="text-primary-foreground/80 hover:text-gold text-sm font-body font-medium tracking-wide transition-colors duration-200">
+
               {link.label}
             </button>
-          ))}
+          )}
         </nav>
 
         {/* CTA phone */}
         <a
           href="tel:+380504800825"
-          className="hidden md:flex items-center gap-2 bg-gold hover:bg-gold-dark text-accent-foreground px-4 py-2 rounded-full text-sm font-body font-medium transition-all duration-200 shadow-gold-custom"
-        >
+          className="hidden md:flex items-center gap-2 bg-gold hover:bg-gold-dark text-accent-foreground px-4 py-2 rounded-full text-sm font-body font-medium transition-all duration-200 shadow-gold-custom">
+
           <Phone size={14} />
           <span>+38 050 480 0825</span>
         </a>
@@ -75,33 +75,33 @@ export default function Header() {
         <button
           className="md:hidden text-primary-foreground p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Меню"
-        >
+          aria-label="Меню">
+
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-navy border-t border-navy-light/30 px-4 pt-4 pb-6 flex flex-col gap-4 animate-fade-in">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNav(link.href)}
-              className="text-primary-foreground/80 hover:text-gold text-base font-body font-medium text-left py-1 transition-colors"
-            >
+      {mobileOpen &&
+      <div className="md:hidden bg-navy border-t border-navy-light/30 px-4 pt-4 pb-6 flex flex-col gap-4 animate-fade-in">
+          {navLinks.map((link) =>
+        <button
+          key={link.href}
+          onClick={() => handleNav(link.href)}
+          className="text-primary-foreground/80 hover:text-gold text-base font-body font-medium text-left py-1 transition-colors">
+
               {link.label}
             </button>
-          ))}
+        )}
           <a
-            href="tel:+380504800825"
-            className="flex items-center gap-2 bg-gold text-accent-foreground px-4 py-2.5 rounded-full text-sm font-medium w-fit mt-2"
-          >
+          href="tel:+380504800825"
+          className="flex items-center gap-2 bg-gold text-accent-foreground px-4 py-2.5 rounded-full text-sm font-medium w-fit mt-2">
+
             <Phone size={14} />
             <span>+38 050 480 0825</span>
           </a>
         </div>
-      )}
-    </header>
-  );
+      }
+    </header>);
+
 }
