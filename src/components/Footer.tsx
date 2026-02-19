@@ -1,0 +1,74 @@
+import { Phone, Mail, MapPin } from "lucide-react";
+
+export default function Footer() {
+  const handleNav = (href: string) => {
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <footer className="bg-foreground border-t border-primary-foreground/10">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-3 gap-10 items-start">
+          {/* Brand */}
+          <div>
+            <div className="font-display text-2xl font-bold text-primary-foreground tracking-wider">ДЕНТІС</div>
+            <div className="text-gold text-[10px] tracking-[0.3em] uppercase font-body font-light mb-4">Стоматологія</div>
+            <p className="font-body text-primary-foreground/50 text-sm leading-relaxed">
+              Преміальна стоматологічна клініка у Кропивницькому. Ваша посмішка — наша гордість.
+            </p>
+          </div>
+
+          {/* Nav */}
+          <div>
+            <p className="font-body text-primary-foreground/40 text-xs tracking-widest uppercase mb-4">Навігація</p>
+            <nav className="flex flex-col gap-2.5">
+              {[
+                ["#about", "Про нас"],
+                ["#services", "Послуги"],
+                ["#doctors", "Лікарі"],
+                ["#news", "Новини та акції"],
+                ["#reviews", "Відгуки"],
+                ["#contacts", "Контакти"],
+              ].map(([href, label]) => (
+                <button
+                  key={href}
+                  onClick={() => handleNav(href)}
+                  className="font-body text-primary-foreground/60 hover:text-gold text-sm text-left transition-colors"
+                >
+                  {label}
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="font-body text-primary-foreground/40 text-xs tracking-widest uppercase mb-4">Контакти</p>
+            <div className="space-y-3">
+              <a href="tel:+380504800825" className="flex items-center gap-2.5 text-primary-foreground/70 hover:text-gold transition-colors text-sm font-body">
+                <Phone size={14} /> +38 050 480 0825
+              </a>
+              <a href="mailto:dentis.verhovsky@gmail.com" className="flex items-center gap-2.5 text-primary-foreground/70 hover:text-gold transition-colors text-sm font-body">
+                <Mail size={14} /> dentis.verhovsky@gmail.com
+              </a>
+              <div className="flex items-start gap-2.5 text-primary-foreground/70 text-sm font-body">
+                <MapPin size={14} className="mt-0.5 shrink-0" />
+                <span>вул. Героїв-рятувальників, 9/2, Кропивницький</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-primary-foreground/10 mt-10 pt-7 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="font-body text-primary-foreground/30 text-xs">
+            © {new Date().getFullYear()} Дентіс. Всі права захищені.
+          </p>
+          <p className="font-body text-primary-foreground/30 text-xs">
+            Головний лікар: Верховський Олександр Олександрович
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
