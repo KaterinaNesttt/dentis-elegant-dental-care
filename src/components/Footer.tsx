@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-foreground border-t border-primary-foreground/10">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 bg-primary text-secondary">
         <div className="grid md:grid-cols-3 gap-10 items-start">
           {/* Brand */}
           <div>
@@ -24,21 +24,21 @@ export default function Footer() {
             <p className="font-body text-primary-foreground/40 text-xs tracking-widest uppercase mb-4">Навігація</p>
             <nav className="flex flex-col gap-2.5">
               {[
-                ["#about", "Про нас"],
-                ["#services", "Послуги"],
-                ["#doctors", "Лікарі"],
-                ["#news", "Новини та акції"],
-                ["#reviews", "Відгуки"],
-                ["#contacts", "Контакти"],
-              ].map(([href, label]) => (
-                <button
-                  key={href}
-                  onClick={() => handleNav(href)}
-                  className="font-body text-primary-foreground/60 hover:text-gold text-sm text-left transition-colors"
-                >
+              ["#about", "Про нас"],
+              ["#services", "Послуги"],
+              ["#doctors", "Лікарі"],
+              ["#news", "Новини та акції"],
+              ["#reviews", "Відгуки"],
+              ["#contacts", "Контакти"]].
+              map(([href, label]) =>
+              <button
+                key={href}
+                onClick={() => handleNav(href)}
+                className="font-body text-primary-foreground/60 hover:text-gold text-sm text-left transition-colors">
+
                   {label}
                 </button>
-              ))}
+              )}
             </nav>
           </div>
 
@@ -69,6 +69,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }

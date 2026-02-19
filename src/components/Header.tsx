@@ -34,17 +34,17 @@ export default function Header() {
       "bg-transparent py-5"}`
       }>
 
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-between bg-accent">
         {/* Logo */}
         <a
           href="#"
           className="flex flex-col leading-none"
           onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}>
 
-          <span className="tracking-wider text-secondary font-sans font-medium text-3xl">
+          <span className="font-display text-2xl font-bold text-primary-foreground tracking-wider">
             ДЕНТІС
           </span>
-          <span className="text-[10px] tracking-[0.3em] uppercase font-light text-accent font-sans">
+          <span className="text-gold text-[10px] tracking-[0.3em] uppercase font-body font-light">
             Стоматологія
           </span>
         </a>
