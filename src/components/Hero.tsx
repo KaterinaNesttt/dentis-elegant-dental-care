@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import heroClinic from "@/assets/hero-clinic.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 
 export default function Hero() {
   const handleScroll = (href: string) => {
@@ -9,13 +9,17 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image with overlay */}
+      {/* Background video with overlay */}
       <div className="absolute inset-0">
-        <img
-          src={heroClinic}
-          alt="Клініка Дентіс"
-          className="w-full h-full object-cover" />
-
+        <video
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          ref={(el) => { if (el) el.playbackRate = 0.7; }}
+        />
         <div className="absolute inset-0 gradient-hero opacity-80" />
       </div>
 
