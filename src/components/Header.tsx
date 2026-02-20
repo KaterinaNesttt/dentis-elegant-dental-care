@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import logo from "@assets/Dentis_with_Text.webp"
+import logo from "@assets/Dentis_with_Textg.webp"
 
 const navLinks = [
 { label: "Про нас", href: "#about" },
@@ -81,12 +81,12 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen &&
-      <div className="md:hidden bg-navy border-t border-navy-light/30 px-4 pt-4 pb-6 flex flex-col gap-4 animate-fade-in">
+      <div className="md:hidden bg-navy opacity-95 border-t border-navy-light/30 px-4 pt-4 pb-6 flex flex-col gap-4 animate-fade-in">
           {navLinks.map((link) =>
         <button
           key={link.href}
           onClick={() => handleNav(link.href)}
-          className="text-primary-foreground/80 hover:text-gold text-base font-body font-medium text-left py-1 transition-colors">
+          className="text-primary-foreground/80 hover:text-gold text-lg text-base font-body font-medium text-left py-1 transition-colors">
 
               {link.label}
             </button>
