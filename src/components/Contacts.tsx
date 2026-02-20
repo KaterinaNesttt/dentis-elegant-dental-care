@@ -45,11 +45,11 @@ export default function Contacts() {
               },
             ].map(({ icon: Icon, label, value, href, sub }) => (
               <div key={label} className="flex gap-4">
-                <div className="w-11 h-11 rounded-xl gradient-hero flex items-center justify-center shrink-0 shadow-navy-custom">
+                <div className="w-11 h-11 rounded-xl gradient-gold flex items-center justify-center shrink-0 shadow-navy-custom">
                   <Icon size={18} className="text-accent-foreground" />
                 </div>
                 <div>
-                  <p className="font-body text-navy/50 text-xs tracking-wider uppercase mb-1">{label}</p>
+                  <p className="font-body text-navy/90 text-xs tracking-wider uppercase mb-1">{label}</p>
                   {href ? (
                     <a
                       href={href}
@@ -70,7 +70,7 @@ export default function Contacts() {
             <div className="pt-4">
               <a
                 href="tel:+380504800825"
-                className="inline-flex items-center gap-3 gradient-hero opacity-68 transition-opacity text-accent-foreground px-8 py-4 rounded-full font-body font-semibold text-base shadow-navy-custom hover:navy hover:opacity-90 transition-opacity"
+               className="inline-flex items-center gap-2 border-2 border-navy text-custom-dark hover:bg-navy hover:text-primary-foreground px-8 py-3.5 rounded-full font-body font-semibold text-sm transition-all duration-200"
               >
                 <Phone size={18} />
                 Записатися за дзвінком

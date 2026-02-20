@@ -32,7 +32,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled ?
       "bg-navy shadow-nav opacity-95 py-3" :
-      "bg-transparent py-5"}`
+      "bg-transparent opacity-95 py-5"}`
       }>
 
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -48,7 +48,7 @@ export default function Header() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-9">
           {navLinks.map((link) =>
           <button
             key={link.href}
@@ -63,7 +63,7 @@ export default function Header() {
         {/* CTA phone */}
         <a
           href="tel:+380504800825"
-          className="hidden md:flex items-center gap-2 bg-gold hover:bg-gold-dark text-accent-foreground px-4 py-2 rounded-full text-sm font-body font-medium transition-all duration-200 shadow-gold-custom">
+          className="hidden md:flex items-center gap-2 gradient-gold hover:bg-gold-dark text-accent-foreground px-4 py-2 rounded-full text-sm font-body font-medium transition-all duration-200 shadow-gold-custom">
 
           <Phone size={14} />
           <span>+38 050 480 0825</span>
@@ -100,6 +100,7 @@ export default function Header() {
           </a>
         </div>
       }
+      
     </header>);
 
 }

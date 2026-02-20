@@ -7,7 +7,7 @@ export default function Footer() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  return (
+  return (    
     <footer className="bg-navy border-t border-primary-foreground/10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-10 items-start">
@@ -20,11 +20,11 @@ export default function Footer() {
           <img
             src={logo}
             alt="Dentis Logo"
-            className="h-24 w-auto brightness-125 opacity-90 hover:opacity-100 transition-opacity duration-200"
+            className="h-24 w-auto brightness-125 opacity-80 hover:opacity-100 transition-opacity duration-500"
           />
         </a>
             <p className="font-body text-primary-foreground/50 text-sm leading-relaxed">
-              Преміальна стоматологічна клініка у Кропивницькому. Ваша посмішка — наша гордість.
+             Стоматологічна клініка у Кропивницькому. Ваша посмішка — наша гордість.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="font-body text-primary-foreground/40 text-xs tracking-widest uppercase mb-4">Контакти</p>
+            <p className="font-body text-primary-foreground/60 text-xs tracking-widest uppercase mb-4">Контакти</p>
             <div className="space-y-3">
               <a href="tel:+380504800825" className="flex items-center gap-2.5 text-primary-foreground/70 hover:text-gold transition-colors text-sm font-body">
                 <Phone size={14} /> +38 050 480 0825
@@ -69,11 +69,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-10 pt-7 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="font-body text-primary-foreground/30 text-xs">
+        <div className="border-t border-gold/70 mt-10 pt-7 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="font-body text-primary-foreground/60 text-xs">
             © {new Date().getFullYear()} Дентіс. Всі права захищені.
           </p>
-          <p className="font-body text-primary-foreground/30 text-xs">
+          <p className="font-body text-primary-foreground/60 text-xs">
             Головний лікар: Верховський Олександр Олександрович
           </p>
         </div>
