@@ -1,20 +1,26 @@
 
+import { useState } from 'react';
 import type { FC } from 'react';
 
-const FAQS: FC = () => {
+const Faq: FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <section className="faq max-w-[900px] mx-auto px-5 py-20 md:py-24 lg:py-[80px]">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 md:mb-12 text-navy">
+    <div className="text-center mb-14">
+      <p className="text-gold font-body text-m tracking-[0.3em] uppercase font-medium mb-3">FAQ</p>
+      <h2 className="font-display text-4xl md:text-5xl font-bold text-custom-dark gold-line-center">
         Поширені запитання
       </h2>
+    </div>
 
       <div className="divide-y divide-gray-200">
         {faqItems.map((item, index) => (
-          <details key={index} className="group">
+          <details key={index} className="group" open={openIndex === index} onChange={() => setOpenIndex(openIndex === index ? null : index)}>
             <summary className="flex items-center justify-between cursor-pointer py-5 text-lg md:text-xl font-semibold text-[#2b6f73] hover:text-[#1e5559] transition-colors duration-300">
               {item.question}
               <span className="ml-4 text-2xl font-bold transition-transform duration-300 group-open:rotate-180">
-                {group.open ? '−' : '+'}
+                {openIndex === index ? '−' : '+'}
               </span>
             </summary>
             <div className="pb-6 pt-3 text-base md:text-lg text-[#444] leading-relaxed">
@@ -59,4 +65,4 @@ const faqItems = [
   },
 ];
 
-export default FAQ;
+export default Faq;

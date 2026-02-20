@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import logo from "@assets/Dentis_with_Textg.webp"
+import logo from "@assets/Dentis_with_Text.webp"
 
 const navLinks = [
 { label: "Про нас", href: "#about" },
