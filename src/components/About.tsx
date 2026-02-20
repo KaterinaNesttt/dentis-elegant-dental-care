@@ -15,14 +15,14 @@ export default function About() {
           {/* Left text */}
           <div>
             <p className="text-gold font-body text-sm tracking-[0.3em] uppercase font-medium mb-4">Про нас</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-custom-dark leading-tight mb-6 gold-line">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-navy leading-tight mb-6 gold-line">
               Довіра пацієнтів —<br />
               <em className="not-italic text-custom-dark">наша найвища нагорода</em>
             </h2>
-            <p className="font-body text-muted-foreground leading-relaxed mb-5">
+            <p className="font-body text-navy leading-relaxed mb-5">
               Стоматологічна клініка <strong className="text-custom-dark">«Дентіс»</strong> — це місце, де сучасна медицина поєднується з турботою та теплом. Ми надаємо стоматологічну допомогу найвищого рівня.
             </p>
-            <p className="font-body text-muted-foreground leading-relaxed mb-8">
+            <p className="font-body text-navy leading-relaxed mb-8">
               Наша клініка оснащена передовим цифровим обладнанням. Ми постійно навчаємося та впроваджуємо найновіші методики лікування, щоб ви отримували найкращий результат.
             </p>
 
