@@ -67,15 +67,14 @@ export default function Contacts() {
               </div>
             ))}
 
-            <div className="pt-4">
-              <a
-                href="tel:+380504800825"
-                className="inline-flex items-center gap-3 gradient-hero opacity-68 transition-opacity text-accent-foreground px-8 py-4 rounded-full font-body font-semibold text-base shadow-navy-custom hover:navy hover:opacity-90 transition-opacity"
-              >
-                <Phone size={18} />
-                Записатися за дзвінком
-              </a>
-            </div>
+            <div className="text-center mt-10">
+          <a
+            href="tel:+380504800825"
+            className="inline-flex items-center gap-2 border-2 border-navy text-custom-dark hover:bg-navy hover:text-primary-foreground px-8 py-3.5 rounded-full font-body font-semibold text-sm transition-all duration-200"
+          >
+            Записатися на консультацію
+          </a>
+        </div>
           </div>
 
           {/* Map embed */}
