@@ -45,7 +45,7 @@ export default function Contacts() {
               },
             ].map(({ icon: Icon, label, value, href, sub }) => (
               <div key={label} className="flex gap-4">
-                <div className="w-11 h-11 rounded-xl gradient-hero flex items-center justify-center shrink-0 shadow-navy-custom">
+                <div className="w-11 h-11 rounded-xl gradient-gold flex items-center justify-center shrink-0 shadow-navy-custom">
                   <Icon size={18} className="text-accent-foreground" />
                 </div>
                 <div>
