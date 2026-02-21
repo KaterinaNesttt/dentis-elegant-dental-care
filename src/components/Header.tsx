@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import logo from "@assets/Dentis_with_Text.webp"
+import logo from "@assets/Dentis_with_Text.avif"
 
 const navLinks = [
 { label: "Про нас", href: "#about" },
@@ -42,6 +42,7 @@ export default function Header() {
           onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}>
           <img
             src={logo}
+            fetchPriority="high"
             alt="Dentis Logo"
             className="h-20 w-auto brightness-100 opacity-90 hover:opacity-100 transition-opacity duration-200"
           />

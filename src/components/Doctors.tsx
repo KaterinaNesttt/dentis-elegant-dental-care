@@ -1,5 +1,5 @@
-import doctorVerhovsky from "@/assets/doctor-verhovsky.jpg";
-import doctorFemale from "@/assets/doctor-female.jpg";
+import doctorVerhovsky from "@/assets/doctor-verhovsky.avif";
+import doctorFemale from "@/assets/doctor-female.avif";
 
 const doctors = [
   {
