@@ -37,7 +37,7 @@ const news = [
 
 export default function NewsSection() {
   return (
-    <section id="news" className="py-24 bg-secondary">
+    <section id="news" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-gold font-body text-sm tracking-[0.3em] uppercase font-medium mb-3">Актуальне</p>
