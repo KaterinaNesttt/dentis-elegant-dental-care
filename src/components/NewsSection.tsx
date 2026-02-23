@@ -41,7 +41,7 @@ export default function NewsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-gold font-body text-sm tracking-[0.3em] uppercase font-medium mb-3">Актуальне</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-custom-dark gold-line-center">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-secondary gold-line-center">
             Новини та пропозиції
           </h2>
         </div>
